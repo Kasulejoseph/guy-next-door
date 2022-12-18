@@ -2,8 +2,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { GetStaticPaths } from "next";
-
-const BASEURL = "https://jsonplaceholder.typicode.com/posts";
+import { BASE_URL } from "../../../config";
+import { Meta } from "../../../components/Meta";
 
 type articleType = {
   userId: Number;
@@ -15,8 +15,9 @@ type articleObjType = {
   article: {
     userId: Number;
     id: Number;
-    title: String;
-    body: String;
+    title: string;
+    body: string;
+    excerpt: string;
   };
 };
 
@@ -26,6 +27,7 @@ const index = ({ article }: articleObjType) => {
 
   return (
     <>
+      <Meta title={article.title} description={article.excerpt}/>
       <h1>{article.title}</h1>
       <p>{article.body}</p>
     </>
@@ -33,7 +35,8 @@ const index = ({ article }: articleObjType) => {
 };
 
 export const getStaticProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`${BASEURL}/${context?.params?.id}`);
+  // const res = await fetch(`${BASE_URL}/${context?.params?.id}`);
+  const res = await fetch(`${BASE_URL}/articles/${context?.params?.id}`);
   const article = await res.json();
   return {
     props: { article },
@@ -41,7 +44,7 @@ export const getStaticProps: GetServerSideProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(BASEURL);
+  const res = await fetch(`${BASE_URL}/articles`);
   const articles = await res.json();
 
   const paths = articles.map((article: articleType) => ({

@@ -23,7 +23,7 @@ export default function Articles({ articles }: articlesListType) {
   return (
     <div className={ArticlesStyle.grid}>
       {articles.map((article: articleObjType) => (
-        <Article article={article} />
+        <Article key={article.id} article={article} />
       ))}
     </div>
   );
