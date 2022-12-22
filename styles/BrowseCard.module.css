@@ -1,0 +1,9 @@
+.card {
+    list-style: none;
+    border: none;
+    width: 18rem;
+}
+
+.cardBody {
+    padding: 1rem 0px;
+}

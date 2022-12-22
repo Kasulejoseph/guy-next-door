@@ -18,7 +18,7 @@ export const Article = ({ article }: articleType) => {
       as={`articles/${article.id}`}
     >
       <h3>{article.title} &rarr;</h3>
-      <p>{article.body}</p>
+      {/* <p>{article.body}</p> */}
     </Link>
   );
 };
