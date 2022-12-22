@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { GetStaticPaths } from "next";
 import { BASE_URL } from "../../../config";
-import { Meta } from "../../../components/Meta";
+import { Meta } from "../../../components/Layouts/Meta";
 
 type articleType = {
   userId: Number;

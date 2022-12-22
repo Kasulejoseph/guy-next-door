@@ -1,11 +1,11 @@
-import Card from 'react-bootstrap/Card';
-import styles from '../styles/BrowseCard.module.css'
+import Card from "react-bootstrap/Card";
+import styles from "../../styles/BrowseCard.module.css";
 
 interface browsecard {
-    category: string;
+  category: string;
 }
 
-export function BrowseCard({category}: browsecard) {
+export function BrowseCategoryCard({ category }: browsecard) {
   return (
     <Card className={styles.card}>
       <Card.Img variant="top" src="/jason-restuarant.jpg" />

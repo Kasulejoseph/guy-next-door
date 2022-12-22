@@ -1,4 +1,4 @@
-import ArticlesStyle from "../styles/Articles.module.css";
+import ArticlesStyle from "../../styles/Articles.module.css";
 import Link from "next/link";
 
 export type articleType = {

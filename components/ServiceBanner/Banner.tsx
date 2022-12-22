@@ -1,11 +1,11 @@
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 interface servicebanner {
-    type: string;
+  type: string;
 }
 
-export function ServiceBanner({type}: servicebanner) {
+export function ServiceBanner({ type }: servicebanner) {
   return (
     <Card className="bg-dark text-white">
       <Card.Img src="/amadej-tauses.jpg" alt="Card image" />
