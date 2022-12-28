@@ -1,0 +1,9 @@
+.detailsCard {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.detailsCardImage {
+    width: 30%;
+}
