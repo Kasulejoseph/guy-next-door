@@ -4,11 +4,11 @@ import Navigation from './Nav'
 
 export default function Layouts({children}: any) {
   return (
-    <div>
+    <>
       <Meta />
       <Navigation />
       {children}
-    </div>
+    </>
     
   )
 }

@@ -23,11 +23,9 @@ export default function Home({ articles }: articlesListType) {
       <ServiceBannerList />
       <BrowseCategoryList />
       <FeaturedList />
-      <ul className="">
-        <ul className="">
+      <ul className="row">
           {" "}
           <h3>Requests</h3>
-        </ul>
         <ArticlesList articles={articles} />
       </ul>
     </>

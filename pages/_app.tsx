@@ -8,11 +8,11 @@ import styles from "../styles/Home.module.css";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layouts>
-      <Container>
         <main className={styles.main}>
+        <Container>
           <Component {...pageProps} />
+        </Container>
         </main>
-      </Container>
     </Layouts>
   );
 }

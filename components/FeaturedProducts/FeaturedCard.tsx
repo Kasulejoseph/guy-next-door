@@ -7,7 +7,7 @@ interface featuredcard {
 
 export function FeaturedCard({ type }: featuredcard) {
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} >
       <Card.Img variant="top" src="/atikah-salon.jpg" />
       <Card.Body className={styles.cardBody}>
         <Card.Title>

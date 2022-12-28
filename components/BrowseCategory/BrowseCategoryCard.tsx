@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Card from "react-bootstrap/Card";
 import styles from "../../styles/BrowseCard.module.css";
 
@@ -6,8 +7,15 @@ interface browsecard {
 }
 
 export function BrowseCategoryCard({ category }: browsecard) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    console.log("yessss");
+    router.push(`/${category.toLowerCase()}`)
+
+  }
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} onClick={handleClick}>
       <Card.Img variant="top" src="/jason-restuarant.jpg" />
       <Card.Body className={styles.cardBody}>
         <Card.Title>{category}</Card.Title>

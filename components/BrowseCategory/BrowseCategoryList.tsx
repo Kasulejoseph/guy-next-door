@@ -3,17 +3,14 @@ import { BrowseCategoryCard } from "./BrowseCategoryCard";
 export const BrowseCategoryList = () => {
   return (
     <>
-      <ul className="row" style={{ listStyle: "None", padding: "0px" }}>
+      <ul className="row" style={{ listStyle: "None" }}>
         <h3 className="mt-3">Browse By Category</h3>
-        <li className="col">
-          <BrowseCategoryCard category="Restuarants" />
-        </li>
-        <li className="col">
-          <BrowseCategoryCard category="Laundry" />
-        </li>
-        <li className="col">
-          <BrowseCategoryCard category="Tours & Travel" />
-        </li>
+        {["Restuarants", "Laundry", "Tours & Travel", "Art"].map((category) => (
+          <li key={category} className="col">
+            {" "}
+            <BrowseCategoryCard category={category} />{" "}
+          </li>
+        ))}
       </ul>
     </>
   );
