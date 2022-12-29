@@ -1,10 +1,10 @@
-import { CategoryCard } from "../Categories/CategoriesCard";
+import { CategoryCard } from "./CategoriesCard";
 
-export const BrowseCategoryList = () => {
+export const CategoriesList = () => {
   return (
     <>
-      <ul className="row" style={{ listStyle: "None" }}>
-        <h3 className="mt-3">Browse By Category</h3>
+      <ul className="row" style={{ listStyle: "None", padding: '0px' }}>
+        {/* <h3 className="mt-3">All Categories</h3> */}
         {["Restuarants", "Laundry", "Tours & Travel", "Art"].map((category) => (
           <li key={category} className="col">
             {" "}

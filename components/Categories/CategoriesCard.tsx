@@ -6,7 +6,7 @@ interface browsecard {
   category: string;
 }
 
-export function BrowseCategoryCard({ category }: browsecard) {
+export const  CategoryCard = ({ category }: browsecard) => {
   const router = useRouter();
 
   const handleClick = () => {

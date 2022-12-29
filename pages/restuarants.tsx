@@ -5,7 +5,7 @@ import { Restuarants } from '../components/Restuarants'
 export default function restuarant() {
   return (
     <>
-    <BreadCrumb/>
+    <BreadCrumb category='Restuarants'/>
     <Restuarants />
     </>
   )

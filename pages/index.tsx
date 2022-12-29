@@ -24,8 +24,8 @@ export default function Home({ articles }: articlesListType) {
       <BrowseCategoryList />
       <FeaturedList />
       <ul className="row">
-          {" "}
-          <h3>Requests</h3>
+        {" "}
+        <h3>Requests</h3>
         <ArticlesList articles={articles} />
       </ul>
     </>

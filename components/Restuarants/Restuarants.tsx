@@ -13,8 +13,8 @@ export const Restuarants = () => {
         {[
           "Maama Naki Restuarant",
           "Fraine Restuarants",
-          "Grill and TakeAway",
-          "Spoons and Forks",
+          "Grill & TakeAway",
+          "Spoons & Forks",
           "Ceilo Bar And Restuarant",
         ].map((res) => (
           <Card className={style.detailsCard}>
