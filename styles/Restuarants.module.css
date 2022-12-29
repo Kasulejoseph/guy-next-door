@@ -7,3 +7,28 @@
 .detailsCardImage {
     width: 30%;
 }
+
+.cardBodyLink {
+    text-decoration: none;
+}
+
+.sideListGroup {
+    line-height: 2rem;
+}
+
+.sideListCheckbox {
+    margin-top: 0.5rem;
+}
+
+/* .breadcrumbMain {
+    font-size: x-large;
+} */
+.breadcrumbMain > a {
+    text-decoration: none;
+}
+.breadcrumbMain > a:hover {
+    text-decoration: underline;
+}
+/* .breadcrumbLast {
+    margin-top: 0.5rem;
+} */
