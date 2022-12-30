@@ -29,6 +29,14 @@
 .breadcrumbMain > a:hover {
     text-decoration: underline;
 }
+
+.cardTitle {
+    color: #4285f4;
+    margin-bottom: 1.5rem;
+}
+.cardBadge {
+    margin-right: 0.5rem;
+}
 /* .breadcrumbLast {
     margin-top: 0.5rem;
 } */

@@ -18,6 +18,7 @@ function Navigation() {
             navbarScroll
           >
             <Link className='nav-link' href="/"> Home</Link>
+            <Link className='nav-link' href="/requests"> Requests</Link>
             <Link className='nav-link' href="/about"> About</Link>
           </Nav>
           <Form className="d-flex">

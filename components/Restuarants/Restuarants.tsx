@@ -1,5 +1,5 @@
 import { Col, Row, Card } from "react-bootstrap";
-import style from "../../styles/Restuarants.module.css";
+import style from "../../styles/Card.module.css";
 import Link from "next/link";
 import { FilterSideBar } from "../Layouts/FilterSideBar";
 

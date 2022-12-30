@@ -1,5 +1,5 @@
 import { ListGroup, Form } from "react-bootstrap";
-import style from "../../styles/Restuarants.module.css";
+import style from "../../styles/Card.module.css";
 
 export const FilterSideBar = () => {
   return (

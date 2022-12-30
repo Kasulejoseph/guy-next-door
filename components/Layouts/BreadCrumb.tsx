@@ -1,5 +1,5 @@
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import style from "../../styles/Restuarants.module.css";
+import style from "../../styles/Card.module.css";
 
 interface breadcrumbprops {
   category: string | "";
