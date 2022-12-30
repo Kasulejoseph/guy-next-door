@@ -1,8 +1,19 @@
-import { Col, Row, Card, ListGroup, Form, Badge } from "react-bootstrap";
+import { Col, Row, Card, Badge } from "react-bootstrap";
 import style from "../../styles/Card.module.css";
 import { RequestSideFilter } from "./RequestSideFilter";
 
-export const Requests = () => {
+interface requestObjType {
+  id: string;
+  title: string;
+  tags: Array<string>;
+  duration: string;
+  body: string;
+}
+interface requestsType {
+  requests: Array<requestObjType>;
+}
+
+export const Requests = ({ requests }: requestsType) => {
   return (
     <>
       <Row>
@@ -10,42 +21,21 @@ export const Requests = () => {
           <RequestSideFilter />
         </Col>
         <Col sm={9}>
-          {[
-            "Maama Naki Restuarant",
-            "Fraine Restuarants",
-            "Grill & TakeAway",
-            "Spoons & Forks",
-            "Ceilo Bar And Restuarant",
-          ].map((res) => (
-            <Card className={style.detailsCard}>
+          {requests.map((request) => (
+            <Card key={request.id} className={style.detailsCard}>
               <Card.Body>
                 <Card.Title className={style.cardTitle}>
-                  ChatGPT tool that allows to prompt large texts
+                  {request.title}
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  Posted: 2 hours ago
+                  Posted: {request.duration} hours ago
                 </Card.Subtitle>
-                {/* <Link className={style.cardBodyLink} href="#">
-                <h3>{res}</h3>
-              </Link> */}
-                <Card.Text>
-                  We are a startup software Company and we are looking for a
-                  specialist web developer who can help us Create, Develope,
-                  Setup and train us on long term adjustment for our online
-                  presence which is yet to be built from scratch.
-                </Card.Text>
-                <Badge className={style.cardBadge} bg="secondary">
-                  Arts
-                </Badge>
-                <Badge className={style.cardBadge} bg="secondary">
-                  Groceries
-                </Badge>
-                <Badge className={style.cardBadge} bg="secondary">
-                  Education
-                </Badge>
-                <Badge className={style.cardBadge} bg="secondary">
-                  Banking
-                </Badge>
+                <Card.Text>{request.body}</Card.Text>
+                {request.tags.map((tag) => (
+                  <Badge className={style.cardBadge} bg="secondary">
+                    {tag}
+                  </Badge>
+                ))}
               </Card.Body>
             </Card>
           ))}
