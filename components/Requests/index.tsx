@@ -1,3 +1,3 @@
-import { Requests } from "./Requests";
+import { Requests } from "./RequestsWrapper";
 
 export { Requests };

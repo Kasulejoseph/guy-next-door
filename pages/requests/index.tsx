@@ -1,17 +1,8 @@
 import React from "react";
 import { Requests } from "../../components/Requests";
+import { requestsType } from "../../components/Requests/types";
 import { BASE_URL } from "../../config";
 
-interface requestObjType {
-    id: string;
-    title: string;
-    tags: Array<string>
-    duration: string;
-    body: string;
-}
-interface requestsType {
-    requests: Array<requestObjType>;
-}
 
 export const index = ({requests}: requestsType) => {    
     
@@ -28,8 +19,6 @@ export const getStaticProps = async () => {
     return {
         props: { requests }
     }
-    
-
 }
 
 export default index;
