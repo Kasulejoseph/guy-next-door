@@ -1,4 +1,4 @@
-import { Col, Row, Card, Badge } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { RequestList } from "./RequestList";
 import { RequestSideFilter } from "./RequestSideFilter";
 import { requestsType } from "./types";
