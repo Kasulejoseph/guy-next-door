@@ -7,6 +7,6 @@ export type requestObjType = {
     body: string;
   };
   
-  export interface requestsType {
+  export type requestsType =  {
     requests: Array<requestObjType>;
   }

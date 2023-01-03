@@ -1,12 +1,16 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { configureStore, ThunkAction, Action, combineReducers } from "@reduxjs/toolkit";
 import { requestSlice } from "./requestSlice";
 import { createWrapper } from "next-redux-wrapper";
 
+const reducers = {
+  [requestSlice.name]: requestSlice.reducer,
+}
+
+const reducer = combineReducers(reducers);
+
 const makeStore = () =>
   configureStore({
-    reducer: {
-      [requestSlice.name]: requestSlice.reducer,
-    },
+    reducer,
     devTools: true,
   });
 

@@ -17,7 +17,7 @@ export const RequestCard = ({ request }: requestType) => {
           </Card.Subtitle>
           <Card.Text>{request.body}</Card.Text>
           {request.tags.map((tag) => (
-            <Badge className={style.cardBadge} bg="secondary">
+            <Badge key={tag} className={style.cardBadge} bg="secondary">
               {tag}
             </Badge>
           ))}

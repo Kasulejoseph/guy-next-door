@@ -5,7 +5,7 @@ export const RequestList = ({ requests }: requestsType) => {
   return (
     <>
       {requests.map((request) => (
-        <RequestCard request={request} />
+        <RequestCard key={request.id} request={request} />
       ))}
     </>
   );

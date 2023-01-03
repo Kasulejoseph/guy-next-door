@@ -3,7 +3,7 @@ import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from "./store";
 
 const initialState = {
-    isLoading: false
+    data: []
 }
 
 export const requestSlice = createSlice({
@@ -11,11 +11,11 @@ export const requestSlice = createSlice({
     initialState,
     reducers: {
         setRequestState(state, action) {
-            state.isLoading = action.payload;
+            state.data = action.payload;
         },
         extraReducers: {
             [HYDRATE]: (state, action) => {
-                console.log('HYDRATE', state, action.payload);
+                console.log('HYDRATE >>>>>>', state, action.payload);
                 return {
                     ...state,
                     ...action.payload.request,
@@ -27,6 +27,6 @@ export const requestSlice = createSlice({
 
 export const { setRequestState } = requestSlice.actions;
 
-export const selectRequestState = (state: AppState) => state.request.isLoading;
+export const selectRequestState = (state: AppState) => state.request.data;
 
 export default requestSlice.reducer;
