@@ -1,15 +1,16 @@
+import { useRouter } from "next/router";
 import { Card, Badge } from "react-bootstrap";
 import style from "../../styles/Card.module.css";
-import { requestObjType } from "./types";
-
-interface requestType {
-  request: requestObjType;
-}
+import { requestType } from "./types";
 
 export const RequestCard = ({ request }: requestType) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/requests/${request.id}`)
+  }
   return (
     <>
-      <Card key={request.id} className={style.detailsCard}>
+      <Card onClick={handleClick} key={request.id} className={style.detailsCard}>
         <Card.Body>
           <Card.Title className={style.cardTitle}>{request.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">

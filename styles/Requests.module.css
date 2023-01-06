@@ -1,0 +1,74 @@
+.detailsWraper {
+    width: 70%;
+    /* border: 1px solid #d5e0d5; */
+    padding: 2rem;
+    text-align: left;
+    padding-bottom: 0px;
+}
+.detailsMain {
+    display: flex;
+    justify-content: center;
+}
+
+.detailsContainer {
+    text-align: -webkit-center;
+}
+
+.detailsTitle {
+    padding: 1rem;
+    /* margin-bottom: 4rem; */
+}
+
+.detailsTitle > h2 {
+    margin-bottom: 3rem;
+}
+
+.cardBadge {
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.detailsSidebar {
+    margin-top: 5rem;
+    width: 20%;
+    text-align: left;
+    padding: 1rem;
+}
+.detailsApplyButton {
+    margin-bottom: 1rem;
+    width: -webkit-fill-available;
+}
+.detailsAboutClient {
+    padding: 0px;
+}
+.detailsAboutClient > li{
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+.detailsFlag{
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.detailsFlag > a {
+    text-decoration: none;
+}
+.detailsFlag > a:hover {
+    text-decoration: underline;
+}
+.detailsClientHistory {
+    width: 90%;
+    text-align: left;
+    padding: 2rem;
+}
+.recentHistoryRating {
+    flex: auto;
+    margin-bottom: 2rem;
+}
+.recentHistoryWraper {
+    /* display: flex; */
+}
+
+.recentHistoryRatingDate {
+    /* align-self: center; */
+}

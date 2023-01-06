@@ -1,20 +1,18 @@
 import { GetServerSideProps } from "next";
 import React from "react";
-import { requestObjType } from "../../components/Requests/types";
+import { requestObjType, requestType } from "../../components/Requests/types";
 import { BASE_URL } from "../../config";
+import { RequestDetails } from "../../components/Requests/RequestDetails";
 
-interface requestType {
-  request: requestObjType;
-}
 
 const page = ({ request }: requestType) => {
   
-  return <div>page {request.id}</div>;
+  return <>
+    <RequestDetails request={request} />
+  </>;
 };
 
 export const getStaticProps: GetServerSideProps = async (context) => {
-  console.log(context.params);
-
   const response = await fetch(`${BASE_URL}/requests/${context?.params?.id}`);
   const request = await response.json();
   return {
